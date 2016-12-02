@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			text-align: center;
+		}
+
+		div {
+			vertical-align: top;
+			border: 1px solid black;
+			height: 100px;
+			width: 150px;
+			display: inline-block;
+			padding-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<p>Total Lewt: {{session['gold']}}</p>
+	<h2>Which building would you like to B+E so that you may *borrow* some monies?</h2>
+			<form action="/process_money" method="post">
+				<div>
+					B+E a Farm! <br>
+					But they work hard! <br>
+					(10-20 gold)<br>
+					<input type="submit" value="Farm" name="building"/>
+				</div>
+				<div>
+					B+E a Cave! <br>
+					Huh? <br>
+					(5-10 gold)<br>
+					<input type="submit" value="Cave" name="building"/>
+				</div>
+				<div>
+					B+E a House! <br>
+					Scumbag! <br>
+					(2-5 gold)<br>
+					<input type="submit" value="House" name="building"/>
+				</div>
+				<div>
+					Gamble!<br>
+					You Degenerate <br>
+					(win/lose 0-50 gold)<br>		
+					<input type="submit" value="Casino" name="building"/>
+				</div>
+			</form>
+	<p>{{session["loot"]}} gold! But you still broke son. Better go *borrow* some more loot bish!</p>
+</body>
+</html>
