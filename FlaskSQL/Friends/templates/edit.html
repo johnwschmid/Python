@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Edit Friend:</h2>
+	<p>ID: {{ one_friend['id'] }}</p>
+	<form action="/update_friend/{{one_friend['id']}}" method='POST'>
+		<label for="first_name">First Name:<input type="text" name="first_name" value="{{ one_friend['first_name'] }}"></label>
+		<label for="last_name">Last Name:<input type="text" name="last_name" value="{{ one_friend['last_name'] }}"></label>
+		<label for="occupation">Occupation:<input type="text" name="occupation" value="{{ one_friend['occupation'] }}"></label>
+		<input type="submit" name="update" value="Update">
+	</form>
+	<hr>
+</body>
+</html>

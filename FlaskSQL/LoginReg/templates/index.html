@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login and Registration</title>
+	<style type="">
+		p {
+			color: red;
+		}
+		span {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<h2>Registration:</h2>
+	<form action="/create_user" method="POST">
+		First Name: <input type="text" name="first_name">
+		Last Name: <input type="text" name="last_name">
+		Email: <input type="text" name="email">
+		Password: <input type="text" name="password">
+		<input type="Submit" value="Register">
+	</form>
+	{% with messages = get_flashed_messages(category_filter= ['message']) %}
+        {% if messages %}
+            {% for message in messages %}
+                <p >{{message|safe}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <br><hr>
+    <h2>Login:</h2>
+	<form action="/login" method="POST">
+		Email: <input type="text" name="email">
+		Password: <input type="text" name="password">
+		<input type="Submit" value="Login">
+	</form>
+	{% with messages = get_flashed_messages(category_filter= ['login']) %}
+		{% if messages %}
+			{% for message in messages %}
+				 <p>{{message}}</p>
+			{% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

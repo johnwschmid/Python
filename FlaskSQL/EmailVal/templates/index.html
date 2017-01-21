@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Email Validation w/ DB</title>
+    <style type="">
+        #error {
+            color: red;
+        }
+        span {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action='/process' method='POST'>
+        Email Address:
+        <input type="text" name="email">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p id= 'error'>{{message|safe}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {{showEmails}}
+    <h1>These are all registered email addresses!</h1>
+    {% for email in allemails: %}
+       <p>Email: {{ email['email'] }}</p>
+       <p>Date Created: {{ email['created_at'] }}</p>
+       <hr>
+    {% endfor %}
+</body>
+</html>
