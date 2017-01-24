@@ -1,0 +1,27 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+    </head>
+    <body>
+      <h1>Index Page</h1>
+      <h3>Create a User</h3>
+      <form action='/results' method='post'>
+        Name: <input type='text' name='name'> <br><br>
+        Dojo Location: <select name="locs">
+          <option value="San Jose">San Jose</option>
+          <option value="DC">DC</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Chicago">Chicago</option>
+          <option value="Seattle">Seattle</option>
+          <option value="LA">Los Angeles</option>
+        </select> <br>
+        Favorite Language: <select name="langs">
+          <option value="Python">Python</option>
+          <option value="Ruby">Ruby</option>
+          <option value="JS">Javascript</option>
+        </select> <br><br>
+        Comment: <input type="text" name="comment"> <br><br>
+        <input type='submit' value='Create User'>
+      </form>
+    </body>
+</html>
