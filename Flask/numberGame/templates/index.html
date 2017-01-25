@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Great Number Game</title>
+	<style type="text/css">
+		* {
+			text-align: center;
+		}
+
+		div {
+			width: 150px;
+			height: 150px;
+			margin: 0 auto;
+			background-color: {{session['bgc']}};
+		}
+	</style>
+</head>
+<body>
+	<h3>You Have Just Entered....</h3>
+	<h2>THE GREAT MUHFUX'N NUMBER GAME BIYAAASHH!!</h2>
+	<h5>I have randomly generated a number between 1 and 100..</h5>
+	<div>
+	</div>
+	<p>{{session['message']}}</p>
+	<form action="/game" method="post">
+		<input type="text" name="guess"><br>
+		<input type="submit" value="Guess Foo!">
+	</form>
+</body>
+</html>
