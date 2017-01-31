@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Word</title>
+	<style type="text/css">
+		* {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2>Random Word:</h2>
+	<h3>(attempt #{{request.session.attempt}})</h3>
+	<p>{{request.session.word}}</p>
+	<form action="/generate" method="POST">
+		{% csrf_token %}
+		<input type="submit" value="Generate">
+	</form>
+</body>
+</html>
