@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result Page</title>
+</head>
+<body>
+	<h2>Survey Data:</h2>
+	<h3>(You have submitted this form {{request.session.count}} times.)</h3>
+	<p>Name: {{request.session.name}}</p>
+	<p>Location: {{request.session.location}}</p>
+	<p>Language: {{request.session.language}}</p>
+	<p>Comment: {{request.session.comment}}</p>
+</body>
+</html>

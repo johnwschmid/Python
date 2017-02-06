@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form Sucka!</title>
+</head>
+<body>
+	<form action="/process" method="post"> {% csrf_token %}
+		Name:
+		<input type="text" name="name"><br><br>
+		Dojo Location:
+		<select name="location">
+			<option>DC</option>
+			<option>LA</option>
+			<option>San Fran</option>
+			<option>Seattle</option>
+			<option>Dallas</option>
+		</select><br>
+		Favorite Language:
+		<select name="language">
+			<option>Javascript</option>
+			<option>Python</option>
+			<option>Ruby On Rails</option>
+		</select><br><br>
+		Comment:
+		<textarea name="comment"></textarea><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
